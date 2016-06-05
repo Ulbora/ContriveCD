@@ -28,11 +28,15 @@ var manager = require('../managers/manager');
 var locationSchema = require('../databaseSchema/locationSchema');
 var microServiceSchema = require('../databaseSchema/microServiceSchema');
 var uiComponentSchema = require('../databaseSchema/uiComponentSchema');
+var assignedServicesSchema = require('../databaseSchema/assignedServicesSchema');
+var assignedUiComponentsSchema = require('../databaseSchema/assignedUiComponentsSchema');
 var userSchema = require('../databaseSchema/userSchema');
 
 var Location = mongoose.model('Location', locationSchema);
 var MicroService = mongoose.model('MicroService', microServiceSchema);
 var UiComponent = mongoose.model('UiComponent', uiComponentSchema);
+var AssignedMicroServices = mongoose.model('AssignedMicroServices', assignedServicesSchema);
+var AssignedUiComponents = mongoose.model('AssignedUiComponents', assignedUiComponentsSchema);
 var User = mongoose.model('User', userSchema);
 
 exports.getLocation = function () {
@@ -43,6 +47,12 @@ exports.getMicroService = function () {
 };
 exports.getUiComponent = function () {
     return UiComponent;
+};
+exports.getAssignedMicroServices = function () {
+    return AssignedMicroServices;
+};
+exports.getAssignedUiComponents = function () {
+    return AssignedUiComponents;
 };
 exports.getUser = function () {
     return User;
