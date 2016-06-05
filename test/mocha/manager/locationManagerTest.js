@@ -24,7 +24,7 @@ describe('LocationManager', function () {
                                     if (listResults.length > 0) {
                                         locationManager.getLocation(locId, function (locResults) {
                                             if (locResults && locResults.name === "eastTest") {
-                                                locationManager.deleteDomain(locId, function (delResults) {
+                                                locationManager.deleteLocation(locId, function (delResults) {
                                                     if (delResults.success) {
                                                         assert(true);
                                                         done();

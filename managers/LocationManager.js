@@ -96,7 +96,7 @@ exports.getLocation = function (id, callback) {
     }
 };
 
-exports.deleteDomain = function (id, callback) {
+exports.deleteLocation = function (id, callback) {
     var returnVal = {
         success: false,
         message: ""
